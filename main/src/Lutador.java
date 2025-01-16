@@ -9,6 +9,7 @@ public class Lutador {
     private int vitorias;
     private int derrotas;
     private int empates;
+    private String sexo;
 
     //método construtor
     public Lutador(String nome,
@@ -18,7 +19,8 @@ public class Lutador {
                    double peso,
                    int vitorias,
                    int derrotas,
-                   int empates) {
+                   int empates,
+                   String sexo) {
         this.nome = nome;
         this.nacionalidade = nacionalidade;
         this.idade = idade;
@@ -27,6 +29,7 @@ public class Lutador {
         this.vitorias = vitorias;
         this.derrotas = derrotas;
         this.empates = empates;
+        this.sexo = sexo;
     }
 
     public String getNome() {
@@ -112,10 +115,19 @@ public class Lutador {
         this.empates = empates;
     }
 
+    public String getSexo() {
+        return sexo;
+    }
+
+    public void setSexo(String sexo) {
+        this.sexo = sexo;
+    }
+
     //métodos
     public void apresentar(){
         System.out.println("-------------------------------------------");
-        System.out.println("Lutador: " + this.getNome());
+        System.out.println("Lutador(a): " + this.getNome());
+        System.out.println("do sexo: " + this.sexo);
         System.out.println("Origem: " + this.getNacionalidade());
         System.out.println(this.getIdade() + " anos");
         System.out.println(this.getAltura() + "m de altura");
@@ -133,6 +145,7 @@ public class Lutador {
         System.out.println(this.getVitorias() + " Vitórias");
         System.out.println(this.getDerrotas() + " Derrotas");
         System.out.println(this.getEmpates() + " Empates");
+        System.out.println("*****************************************");
 
     }
 
